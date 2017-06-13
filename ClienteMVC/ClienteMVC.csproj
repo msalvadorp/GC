@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -243,6 +244,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Banco\_EditarBancoCuerpo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sucursal\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sucursal\_ListadoSucursal.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sucursal\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OrdenPago\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OrdenPago\_ListaOrdenPago.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OrdenPago\Editar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

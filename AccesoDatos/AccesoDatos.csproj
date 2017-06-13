@@ -44,6 +44,7 @@
     <Compile Include="OrdenPagoAD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SucursalAD.cs" />
+    <Compile Include="TipoAD.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

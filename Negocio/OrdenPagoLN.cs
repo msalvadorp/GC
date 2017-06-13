@@ -23,10 +23,10 @@ namespace Negocio
              return new OrdenPagoAD().Actualizar_OrdenPago(OrdenPago);
         }
 
-        public List<OrdenPago> Listar_OrdenPago()
+        public List<OrdenPago> Listar_OrdenPago(int IdSucursal, int TipoMoneda, int TipoSituacion)
         {
             
-             return new OrdenPagoAD().Listar_OrdenPago();
+             return new OrdenPagoAD().Listar_OrdenPago(IdSucursal, TipoMoneda, TipoSituacion);
            
         }
 

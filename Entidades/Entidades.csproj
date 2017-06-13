@@ -44,9 +44,11 @@
     <Compile Include="Core\Banco.cs" />
     <Compile Include="Core\OrdenPago.cs" />
     <Compile Include="Core\Sucursal.cs" />
+    <Compile Include="Core\Tipo.cs" />
     <Compile Include="Parcial\Banco_Parcial.cs" />
     <Compile Include="Parcial\OrdenPago_Parcial.cs" />
     <Compile Include="Parcial\Sucursal_Parcial.cs" />
+    <Compile Include="Parcial\Tipo_Parcial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

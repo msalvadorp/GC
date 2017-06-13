@@ -113,6 +113,8 @@ namespace AccesoDatos
                     while (reader.Read())
                     {
                         entidad = new Sucursal(reader);
+                        entidad.NombreBanco = Convert.ToString(reader["NombreBanco"]);
+                        entidad.NombreBancoSucursal = string.Format("Banco {0} - Sucursal {1}", entidad.Nombre, entidad.NombreBanco);
                         listaEntidad.Add(entidad);
                     }
 

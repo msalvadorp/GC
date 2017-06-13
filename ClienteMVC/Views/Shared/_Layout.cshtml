@@ -53,8 +53,8 @@
             <div id="menuLeft">
                 <ul class="menuDHH">
                     <li><a href="@Url.Action("Index", "Banco")"><i class="fa fa-angle-right"></i>Banco</a></li>
-                    <li><a href="@Url.Action("Index", "Banco")"><i class="fa fa-tasks"></i>Sucursales</a></li>
-                    <li><i class="fa fa-file-excel-o"></i>Orden Pago</li>
+                    <li><a href="@Url.Action("Index", "Sucursal")"><i class="fa fa-tasks"></i>Sucursales</a></li>
+                    <li><a href="@Url.Action("Index", "OrdenPago")"><i class="fa fa-file-excel-o"></i>Orden Pago</a></li>
                 </ul>
             </div>
             <div id="contentRight" class="col-xs-12 col-md-12">
@@ -71,7 +71,7 @@
             </div>
         </div>
         <footer class="footer">
-            Todos los derechos reservados 2015
+            Todos los derechos reservados @DateTime.Now.Year
             <i class="fa fa-phone"></i>
             (511) 708-9999
             <i class="fa fa-mail-forward"></i>

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TipoLN.cs" />
     <Compile Include="BancoLN.cs" />
     <Compile Include="Base\BaseLN.cs" />
     <Compile Include="OrdenPagoLN.cs" />
@@ -54,6 +55,10 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{6d1894e6-fe3c-47ad-88aa-b52c29fbd8d1}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitario\Utilitario.csproj">
+      <Project>{2ae52aec-c4f4-4333-a1bd-ed226a10fb35}</Project>
+      <Name>Utilitario</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

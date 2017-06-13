@@ -30,7 +30,7 @@ namespace AccesoDatos
                     comando.Parameters.AddWithValue("@IdSucursal", OrdenPago.IdSucursal);
                     comando.Parameters.AddWithValue("@Monto", OrdenPago.Monto);
                     comando.Parameters.AddWithValue("@Moneda", OrdenPago.Moneda);
-                    comando.Parameters.AddWithValue("@Estado", OrdenPago.Estado);
+                    comando.Parameters.AddWithValue("@Situacion", OrdenPago.Situacion);
                     comando.Parameters.AddWithValue("@FechaPago", OrdenPago.FechaPago);
                     comando.Parameters.AddWithValue("@FlgEliminado", OrdenPago.FlgEliminado);
                     conexion.Open();
@@ -52,7 +52,7 @@ namespace AccesoDatos
                     comando.Parameters.AddWithValue("@IdSucursal", OrdenPago.IdSucursal);
                     comando.Parameters.AddWithValue("@Monto", OrdenPago.Monto);
                     comando.Parameters.AddWithValue("@Moneda", OrdenPago.Moneda);
-                    comando.Parameters.AddWithValue("@Estado", OrdenPago.Estado);
+                    comando.Parameters.AddWithValue("@Situacion", OrdenPago.Situacion);
                     comando.Parameters.AddWithValue("@FechaPago", OrdenPago.FechaPago);
                     comando.Parameters.AddWithValue("@FlgEliminado", OrdenPago.FlgEliminado);
                     conexion.Open();
@@ -101,7 +101,7 @@ namespace AccesoDatos
             return OrdenPago;
         }
 
-        public List<OrdenPago> Listar_OrdenPago()
+        public List<OrdenPago> Listar_OrdenPago(int IdSucursal, int TipoMoneda, int TipoSituacion)
         {
             List<OrdenPago> listaEntidad = new List<OrdenPago>();
             OrdenPago entidad = null;
@@ -110,11 +110,17 @@ namespace AccesoDatos
                 using (SqlCommand comando = new SqlCommand("usp_ListarOrdenPago", conexion))
                 {
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@IdSucursal", IdSucursal);
+                    comando.Parameters.AddWithValue("@TipoMoneda", TipoMoneda);
+                    comando.Parameters.AddWithValue("@TipoSituacion", TipoSituacion);
                     conexion.Open();
                     SqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
                     {
                         entidad = new OrdenPago(reader);
+                        entidad.NombreSucursalCompleta = Convert.ToString(reader["NombreSucursalCompleta"]);
+                        entidad.NombreMoneda = Convert.ToString(reader["NombreMoneda"]);
+                        entidad.NombreSituacion = Convert.ToString(reader["NombreSituacion"]);
                         listaEntidad.Add(entidad);
                     }
 

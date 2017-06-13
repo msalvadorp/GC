@@ -17,9 +17,9 @@ namespace Entidades
 		[DataMember]  
 		public decimal Monto { get; set; }  
 		[DataMember]  
-		public string Moneda { get; set; }  
+		public int Moneda { get; set; }  
 		[DataMember]  
-		public string Estado { get; set; }  
+		public int Situacion { get; set; }  
 		[DataMember]  
 		public DateTime FechaPago { get; set; }  
 		[DataMember]  

@@ -1,16 +1,9 @@
 ﻿@using Entidades
-@model IEnumerable<Banco>
+@model IEnumerable<Sucursal>
 
 
 @{
 }
-
-
-<script>
-    $(window).on('load', function () {
-        $('.selectpicker').selectpicker();
-    });
-</script>
 
 <div class="row">
     <div class="col-md-12">
@@ -21,6 +14,7 @@
                         <th class="col-md-1 text-center" scope="col">Codigo</th>
                         <th class="col-md-3 text-center" scope="col">Nombre</th>
                         <th class="col-md-3 text-center" scope="col">Direccion</th>
+                        <th class="col-md-3 text-center" scope="col">Banco</th>
                         <th class="col-md-2 text-center" scope="col">Acciones</th>
                     </tr>
 
@@ -34,17 +28,15 @@
                         {
                             contador++;
                             <tr id="@contador">
-                                <td class="text-center">@item.IdBanco</td>
+                                <td class="text-center">@item.IdSucursal</td>
                                 <td class="text-center">@item.Nombre</td>
                                 <td class="text-center">@item.Direccion</td>
-
+                                <td class="text-center">@item.NombreBanco</td>
                                 <td align="center">
-                                    <button type="button" class="btn btn-default btn-xs modalGC" title="Editar"
-                                            data-url="@Url.Action("Editar", "Banco", new { IdBanco = item.IdBanco })">
+                                    <a  class="btn btn-default btn-xs modalGC" title="Editar"
+                                            href="@Url.Action("Editar", "Sucursal", new { IdSucursal = item.IdSucursal })">
                                         <i class="glyphicon glyphicon-pencil"></i>
-                                    </button>
-
-                                    
+                                    </a>
 
                                 </td>
                             </tr>
